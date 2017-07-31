@@ -273,10 +273,7 @@ imputed_data$day_of_week <- as.factor(imputed_data$day_of_week)
 ```r
 imputed_time_series_data <- aggregate(steps ~ interval + day_of_week, data=imputed_data , mean)
 
-ggplot(imputed_time_series_data, aes(x=interval, y=steps)) + geom_line() +
-  facet_wrap(~day_of_week, ncol=1) + 
-  labs(x="5-minute interval", y="Average number of steps", title="Average number of steps over all days \nacross 5-minute intervals") +
-  theme(axis.title=element_text(face="bold",size="11"), plot.title = element_text(size=13, face="bold", hjust = 0.5)) 
+ggplot(imputed_time_series_data, aes(x=interval, y=steps)) + geom_line() + facet_wrap(~day_of_week, ncol=1) + labs(x="5-minute interval", y="Average number of steps", title="Average number of steps over all days \nacross 5-minute intervals") + theme(axis.title=element_text(face="bold",size="11"), plot.title = element_text(size=13, face="bold", hjust = 0.5)) 
 ```
 
 ![plot of chunk Panel plot](figure/Panel plot-1.png)
