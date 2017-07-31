@@ -8,11 +8,7 @@ library(ggplot2)
 library(knitr)
 ```
 
-Set working directory
 
-```r
-setwd("~/Documents/coursera/Course 5. Reproducible_Research/Week 2/")
-```
 
 ###Loading and preprocessing the data
 1. Load the data
